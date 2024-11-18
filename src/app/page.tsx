@@ -21,14 +21,17 @@ export default function Home() {
   }
 
   async function sendQuery() {
-    if (!query) return;
-
-    setResult("");
-    setLoading(true);
-
     try {
+      if (!query) return;
+
+      setResult("");
+      setLoading(true);
+
       const result = await fetch("/api/read", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(query),
       });
 

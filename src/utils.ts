@@ -116,18 +116,16 @@ export const queryPineconeVectorStoreAndQueryLLM = async (
 ) => {
   console.log("Querying pinecone vector store...");
 
-  const index = client.Index(indexName);
+  const index = client.index(indexName);
 
   //query pinecone index and return top 10 matches
   const queryEmbedding = await new OpenAIEmbeddings().embedQuery(question);
 
   let queryResponse = await index.query({
-    queryRequest: {
-      topK: 10,
-      vector: queryEmbedding,
-      includeMetadata: true,
-      includeValues: true,
-    },
+    topK: 10,
+    vector: queryEmbedding,
+    includeMetadata: true,
+    includeValues: true,
   });
 
   console.log(`Found ${queryResponse.matches.length} matches :)`);
