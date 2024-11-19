@@ -1,5 +1,7 @@
 # AI Semantic Search Application
 
+https://github.com/user-attachments/assets/2392cc23-a833-433c-86aa-e8c318a5ef3c
+
 A full-stack application that enables semantic search capabilities using AI technologies. Built with Next.js, Pinecone Vector Database, Langchain, and OpenAI's ChatGPT.
 
 ## 🚀 Features
