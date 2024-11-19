@@ -1,14 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  Search,
-  Loader2,
-  Database,
-  AlertCircle,
-  FileText,
-  ChevronDown,
-} from "lucide-react";
+import { Search, Loader2, Database, FileText, ChevronDown } from "lucide-react";
 
 export default function Home() {
   const [query, setQuery] = useState("");
