@@ -105,7 +105,7 @@ export default function Home() {
               placeholder="Ask about Solana..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && sendQuery()}
+              onKeyDown={(e) => e.key === "Enter" && sendQuery()}
               disabled={loading}
             />
             <Search className="absolute left-3 top-3 h-6 w-6 text-white/50" />
@@ -145,7 +145,8 @@ export default function Home() {
 
         <div className="p-4 bg-white/5 border-t border-white/10">
           <p className="text-center text-sm text-gray-300">
-            Enter your question and press Enter or click "Ask Question"
+            Enter your question and press Enter or click &quot;Ask
+            Question&quot;
           </p>
         </div>
       </div>
